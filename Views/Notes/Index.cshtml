@@ -1,0 +1,254 @@
+<style>
+    :root {
+        --vault-primary: #4361ee;
+        --vault-bg: #ececec;
+        --vault-text-main: #2b2d42;
+        --vault-text-muted: #8d99ae;
+        --vault-border: #edf2f4;
+        --vault-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        --vault-transition: all 0.25s ease;
+    }
+
+    /* Header e Título */
+    .notes-header {
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .notes-title {
+        font-weight: 800;
+        color: var(--vault-text-main);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .btn-create {
+        background-color: var(--vault-primary);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: var(--vault-transition);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
+    }
+
+    .btn-create:hover {
+        background-color: #304ccf;
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    /* Grid Layout */
+    .notes-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 1.5rem;
+    }
+
+    /* Card de Nota */
+    .note-card {
+        background: var(--vault-bg);
+        border: 1px solid var(--vault-border);
+        border-radius: 20px;
+        padding: 1.5rem;
+        position: relative;
+        cursor: pointer;
+        transition: var(--vault-transition);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 220px;
+    }
+
+    .note-card:hover {
+        border-color: var(--vault-primary);
+        box-shadow: var(--vault-shadow);
+        transform: translateY(-4px);
+    }
+
+    /* Ícone e Badge */
+    .note-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.2rem;
+    }
+
+    .note-icon {
+        width: 44px;
+        height: 44px;
+        background: rgba(67, 97, 238, 0.08);
+        color: var(--vault-primary);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+    }
+
+    .status-badge {
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 5px 12px;
+        background: #f1f4ff;
+        color: var(--vault-primary);
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .status-badge::before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        background: #4cc9f0;
+        border-radius: 50%;
+    }
+
+    /* Tipografia do Card */
+    .note-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--vault-text-main);
+        margin-bottom: 8px;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .note-preview {
+        color: var(--vault-text-muted);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    /* Rodapé e Ações */
+    .note-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1rem;
+        border-top: 1px solid #f8f9fa;
+    }
+
+    .note-actions {
+        display: flex;
+        gap: 8px;
+    }
+
+    .action-btn {
+        width: 34px;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        color: var(--vault-text-muted);
+        text-decoration: none;
+        transition: all 0.2s;
+    }
+
+    .action-btn:hover {
+        background: #f1f3f5;
+        color: var(--vault-primary);
+    }
+
+    .action-btn.danger:hover {
+        background: #ffe5e5;
+        color: #e63946;
+    }
+
+    .go-icon {
+        font-size: 1.4rem;
+        color: #dee2e6;
+        transition: var(--vault-transition);
+    }
+
+    .note-card:hover .go-icon {
+        color: var(--vault-primary);
+        transform: translateX(3px);
+    }
+</style>
+
+<div class="container py-4">
+
+    <div class="notes-header">
+        <div class="header-info">
+            <h2 class="notes-title">
+                <i class="bi bi-shield-lock-fill text-primary"></i> Cofre de Notas
+            </h2>
+            <small class="text-muted">Protegendo suas ideias com criptografia local.</small>
+        </div>
+
+        <a asp-action="Create" class="btn-create">
+            <i class="bi bi-plus-lg"></i> Criar Nova Nota
+        </a>
+    </div>
+
+    <div class="notes-grid">
+        @foreach (var note in Model)
+        {
+            <div class="note-card animate__animated animate__fadeInUp"
+                 onclick="window.location='/Notes/Details/@note.Id'">
+
+                <div>
+                    <div class="note-header">
+                        <div class="note-icon">
+                            <i class="bi bi-file-earmark-lock2"></i>
+                        </div>
+                        <span class="status-badge">Encriptada</span>
+                    </div>
+
+                    <h3 class="note-title">
+                        @(string.IsNullOrWhiteSpace(note.Title) ? "[Sem título]" : note.Title)
+                    </h3>
+                    
+                    <p class="note-preview">
+                        @(string.IsNullOrEmpty(note.Content)
+                            ? "Nenhum conteúdo salvo nesta nota..."
+                            : (note.Content.Length > 90
+                                ? note.Content.Substring(0, 90) + "..."
+                                : note.Content))
+                    </p>
+                </div>
+
+                <div class="note-footer">
+                    <div class="note-actions">
+                        <a asp-action="Edit" asp-route-id="@note.Id"
+                           class="action-btn" title="Editar"
+                           onclick="event.stopPropagation();">
+                            <i class="bi bi-pencil-square"></i>
+                        </a>
+
+                        <a asp-action="Delete" asp-route-id="@note.Id"
+                           class="action-btn danger" title="Excluir"
+                           onclick="event.stopPropagation();">
+                            <i class="bi bi-trash3"></i>
+                        </a>
+                    </div>
+
+                    <i class="bi bi-arrow-right-short go-icon"></i>
+                </div>
+
+            </div>
+        }
+    </div>
+</div>

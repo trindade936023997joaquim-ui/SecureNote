@@ -1,0 +1,229 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Login SecureNotes";
+}
+
+<style>
+    :root {
+        --bg-dark: #020617;
+        --card-dark: #0f172a;
+        --accent-blue: #38bdf8;
+        --accent-purple: #818cf8;
+        --text-milk: #f8fafc;
+        --text-muted: #94a3b8;
+    }
+
+    body {
+        background: var(--bg-dark);
+        color: var(--text-milk);
+        font-family: 'Inter', sans-serif;
+    }
+
+    .login-wrapper {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .login-card {
+        width: 100%;
+        max-width: 420px;
+        background: linear-gradient(145deg, rgba(15,23,42,0.9), rgba(2,6,23,0.95));
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 24px;
+        padding: 35px;
+        box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+        backdrop-filter: blur(12px);
+    }
+
+    .logo {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .logo h1 {
+        font-size: 26px;
+        font-weight: 800;
+        letter-spacing: -1px;
+    }
+
+    .logo span {
+        color: var(--accent-blue);
+    }
+
+    .subtitle {
+        text-align: center;
+        color: var(--text-muted);
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .form-control {
+        background: rgba(2,6,23,0.6);
+        border: 1px solid rgba(255,255,255,0.1);
+        color: var(--text-milk);
+        border-radius: 12px;
+        padding: 12px;
+    }
+
+    .form-control:focus {
+        border-color: var(--accent-blue);
+        box-shadow: 0 0 0 0.2rem rgba(56,189,248,0.15);
+        background: rgba(2,6,23,0.8);
+        color: white;
+    }
+
+    label {
+        font-size: 13px;
+        color: var(--text-muted);
+        margin-bottom: 5px;
+    }
+
+    .btn-login {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 12px;
+        font-weight: 800;
+        background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+        color: #020617;
+        transition: 0.3s;
+    }
+
+    .btn-login:hover {
+        transform: translateY(-2px);
+        filter: brightness(1.1);
+    }
+
+    .links {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .links a {
+        display: block;
+        color: var(--accent-blue);
+        text-decoration: none;
+        font-size: 13px;
+        margin-top: 6px;
+    }
+
+    .links a:hover {
+        text-decoration: underline;
+    }
+
+    .checkbox {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        margin: 10px 0;
+        color: var(--text-muted);
+    }
+
+    .external-box {
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    .external-btn {
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 12px;
+    }
+</style>
+
+<div class="login-wrapper">
+
+    <div class="login-card animate__animated animate__fadeInUp">
+
+        <!-- LOGO -->
+        <div class="logo">
+            <h1>SECURE<span>NOTES</span></h1>
+            <div class="subtitle">Acesso seguro ao seu cofre digital</div>
+        </div>
+
+        <form id="account" method="post">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-2"></div>
+
+            <!-- EMAIL -->
+            <div class="mb-3">
+                <label asp-for="Input.Email"></label>
+                <input asp-for="Input.Email" class="form-control"
+                       autocomplete="username"
+                       placeholder="email@exemplo.com" />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+
+            <!-- PASSWORD -->
+            <div class="mb-3">
+                <label asp-for="Input.Password"></label>
+                <input asp-for="Input.Password" class="form-control"
+                       type="password"
+                       autocomplete="current-password"
+                       placeholder="••••••••" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+
+            <!-- REMEMBER -->
+            <div class="checkbox">
+                <input class="form-check-input" asp-for="Input.RememberMe" />
+                <label asp-for="Input.RememberMe"></label>
+            </div>
+
+            <!-- BUTTON -->
+            <button type="submit" class="btn-login">
+                Entrar
+            </button>
+
+            <!-- LINKS -->
+            <div class="links">
+                <a asp-page="./ForgotPassword">Esqueci-me da password</a>
+                <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">
+                    Criar nova conta
+                </a>
+                <a asp-page="./ResendEmailConfirmation">
+                    Reenviar confirmação
+                </a>
+            </div>
+
+        </form>
+
+        <!-- EXTERNAL LOGIN -->
+        <div class="external-box">
+
+            @if ((Model.ExternalLogins?.Count ?? 0) > 0)
+            {
+                <hr class="text-muted" />
+
+                @foreach (var provider in Model.ExternalLogins!)
+                {
+                    <form asp-page="./ExternalLogin"
+                          asp-route-returnUrl="@Model.ReturnUrl"
+                          method="post">
+
+                        <button type="submit"
+                                class="btn btn-outline-light external-btn"
+                                name="provider"
+                                value="@provider.Name">
+                            Entrar com @provider.DisplayName
+                        </button>
+
+                    </form>
+                }
+            }
+
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,79 @@
+/* Configuração Global para evitar barras brancas */
+html[b-j8adopml20] {
+  font-size: 14px;
+  position: relative;
+  min-height: 100%;
+}
+
+@media (min-width: 768px) {
+  html[b-j8adopml20] {
+    font-size: 16px;
+  }
+}
+
+body[b-j8adopml20] {
+  margin-bottom: 80px; /* Espaço para o footer não tapar o conteúdo */
+  background-color: #020617 !important;
+  color: #f8fafc !important;
+}
+
+/* Links do site */
+a[b-j8adopml20] {
+  color: #38bdf8;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+a:hover[b-j8adopml20] {
+  opacity: 0.8;
+  color: #7dd3fc;
+}
+
+/* Botões Customizados */
+.btn-primary[b-j8adopml20] {
+  color: #020617;
+  background-color: #38bdf8;
+  border-color: #38bdf8;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.btn-primary:hover[b-j8adopml20] {
+  background-color: #7dd3fc;
+  border-color: #7dd3fc;
+  transform: translateY(-1px);
+}
+
+/* Override de Bordas do ASP.NET */
+.border-top[b-j8adopml20], .border-bottom[b-j8adopml20] {
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.box-shadow[b-j8adopml20] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .2) !important;
+}
+
+/* Footer Fixo e Escuro */
+.footer[b-j8adopml20] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+  background-color: rgba(2, 6, 23, 0.9);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.note-card[b-j8adopml20] {
+    cursor: pointer;
+}
+
+/* Ajustes para Mobile */
+@media (max-width: 576px) {
+    .navbar-brand[b-j8adopml20] {
+        font-size: 1.2rem;
+    }
+    
+    .footer[b-j8adopml20] {
+        font-size: 0.8rem;
+    }
+}

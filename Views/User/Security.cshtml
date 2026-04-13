@@ -1,0 +1,44 @@
+@{
+    ViewData["Title"] = "Segurança";
+}
+
+<div class="container mt-5">
+
+    <div class="card bg-dark text-light shadow-lg border-0" style="border-radius:20px;">
+        <div class="card-body p-5">
+
+            <h2 class="fw-bold mb-4">
+                <i class="bi bi-shield-lock me-2 text-info"></i>
+                Segurança da Conta
+            </h2>
+
+            <p class="text-muted mb-4">
+                Gerencie as configurações de segurança da sua conta.
+            </p>
+
+            <hr class="border-secondary" />
+
+            <!-- ALTERAR PASSWORD -->
+            <div class="d-flex justify-content-between align-items-center mt-4">
+
+                <div>
+                    <h5 class="fw-bold mb-1">Palavra-passe</h5>
+                    <small class="text-muted">
+                        Atualize a sua palavra-passe regularmente para manter a conta segura.
+                    </small>
+                </div>
+
+                <a asp-controller="User"
+                   asp-action="ChangePassword"
+                   class="btn btn-outline-info fw-bold">
+
+                    <i class="bi bi-key me-2"></i>
+                    Alterar Palavra-passe
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
