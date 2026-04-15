@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SecureNotes")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d6b09347c3a72432bc43a180dd0918e2e82264a")]
 [assembly: System.Reflection.AssemblyProductAttribute("SecureNotes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SecureNotes")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

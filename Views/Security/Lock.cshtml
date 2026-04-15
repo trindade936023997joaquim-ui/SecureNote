@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "Sessão Bloqueada";
+}
+
+<div class="lock-screen">
+
+    <h2>🔒 Sessão Bloqueada</h2>
+    <p>Por segurança, confirme sua senha</p>
+
+    <form method="post" asp-controller="Security" asp-action="Unlock">
+        <input type="password" name="password" placeholder="Digite sua senha" required />
+        <button type="submit">Desbloquear</button>
+    </form>
+
+</div>

@@ -226,6 +226,7 @@
 /home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/obj/Debug/net10.0/SecureNotes.MvcApplicationPartsAssemblyInfo.cache
 /home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/obj/Debug/net10.0/SecureNotes.RazorAssemblyInfo.cache
 /home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/obj/Debug/net10.0/SecureNotes.RazorAssemblyInfo.cs
+/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/obj/Debug/net10.0/SecureNotes.sourcelink.json
 /home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/obj/Debug/net10.0/rjimswa.dswa.cache.json
 /home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/obj/Debug/net10.0/rjsmrazor.dswa.cache.json
 /home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json

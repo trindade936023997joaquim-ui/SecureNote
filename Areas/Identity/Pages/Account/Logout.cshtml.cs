@@ -24,20 +24,20 @@ namespace SecureNotes.Areas.Identity.Pages.Account
             _logger = logger;
         }
 
-        public async Task<IActionResult> OnPost(string returnUrl = null)
+       public async Task<IActionResult> OnPost(string returnUrl = null)
         {
             await _signInManager.SignOutAsync();
-            _logger.LogInformation("User logged out.");
-            if (returnUrl != null)
+
+            _logger.LogInformation("User logged out automatically or manually.");
+
+            // 🔐 Segurança: evita redirect externo (open redirect attack)
+            if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
             {
                 return LocalRedirect(returnUrl);
             }
-            else
-            {
-                // This needs to be a redirect so that the browser performs a new
-                // request and the identity for the user gets updated.
-                return RedirectToPage();
-            }
+
+            // 🔥 Redireciona sempre para Login
+            return RedirectToPage("/Account/Login", new { area = "Identity" });
         }
     }
 }

@@ -195,6 +195,52 @@
 <script>
     console.log("JS ativo");
 </script>
+<script>
+    let timeout;
+    const idleTime = 2 * 60 * 1000; // 2 minutos
+
+    function resetTimer() {
+        clearTimeout(timeout);
+        timeout = setTimeout(lockApp, idleTime);
+    }
+
+    function lockApp() {
+        console.log("🔒 Sessão bloqueada por inatividade");
+
+        // Redireciona para login
+        window.location.href = "/Security/Lock";
+    }
+
+    // Eventos que resetam o tempo
+    document.onload = resetTimer;
+    document.onmousemove = resetTimer;
+    document.onkeypress = resetTimer;
+    document.onclick = resetTimer;
+    document.onscroll = resetTimer;
+</script>
+<script>
+    console.log("Auto-lock ativo");
+
+    let timeout;
+    const idleTime = 2 * 60 * 1000; // 2 minutos
+
+    function logoutUser() {
+        console.log("Logout automático disparado!");
+        document.getElementById("logoutForm").submit();
+    }
+
+    function resetTimer() {
+        clearTimeout(timeout);
+        timeout = setTimeout(logoutUser, idleTime);
+    }
+
+    // Eventos que contam como atividade
+    window.onload = resetTimer;
+    document.onmousemove = resetTimer;
+    document.onkeypress = resetTimer;
+    document.onclick = resetTimer;
+    document.onscroll = resetTimer;
+</script>
 </body>
 
 </html>
