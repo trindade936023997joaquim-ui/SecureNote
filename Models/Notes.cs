@@ -21,12 +21,11 @@ namespace SecureNotes.Models
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
-        // 🔐 NÃO validar no ModelState (vem do backend)
+        
         [Required]
         [ValidateNever]
         public string UserId { get; set; } = string.Empty;
 
-        // 🔐 Navegação também não deve ser validada
         [ValidateNever]
         public ApplicationUser? User { get; set; }
 

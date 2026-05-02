@@ -6,11 +6,10 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 🔐 Serviços custom
 builder.Services.AddSingleton<EncryptionService>();
 builder.Services.AddTransient<IEmailSender, EmailSender>();
 
-// 🗄️ DbContext (MySQL)
+// DbContext (MySQL)
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(
         builder.Configuration.GetConnectionString("DefaultConnection"),
@@ -18,12 +17,11 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     )
 );
 
-// 🔐 Identity (autenticação)
+//Identity (autenticação)
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
     options.SignIn.RequireConfirmedAccount = false;
 
-    // 🔒 Boas práticas de password
     options.Password.RequireDigit = true;
     options.Password.RequiredLength = 6;
     options.Password.RequireUppercase = false;
@@ -43,7 +41,6 @@ builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
-// 🔐 Pipeline HTTP
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -58,13 +55,13 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-// 🔐 Rotas MVC
+// Rotas MVC
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}"
 );
 
-// 🔐 Identity
+//Identity
 app.MapRazorPages();
 
 app.Run();

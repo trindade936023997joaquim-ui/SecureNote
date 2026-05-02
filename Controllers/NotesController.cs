@@ -7,6 +7,7 @@ using System.Security.Claims;
 
 namespace SecureNotes.Controllers
 {
+    //Dados da notas
     [Authorize]
     public class NotesController : Controller
     {
@@ -19,9 +20,6 @@ namespace SecureNotes.Controllers
             _encryption = encryption;
         }
 
-        // =========================
-        // INDEX
-        // =========================
         public IActionResult Index()
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -39,17 +37,11 @@ namespace SecureNotes.Controllers
             return View(notes);
         }
 
-        // =========================
-        // CREATE (GET)
-        // =========================
         public IActionResult Create()
         {
             return View();
         }
 
-        // =========================
-        // CREATE (POST)
-        // =========================
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create(Note note)
@@ -71,9 +63,6 @@ namespace SecureNotes.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // =========================
-        // DETAILS
-        // =========================
         public IActionResult Details(int id)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -91,9 +80,6 @@ namespace SecureNotes.Controllers
             return View(note);
         }
 
-        // =========================
-        // EDIT (GET)
-        // =========================
         public IActionResult Edit(int id)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);

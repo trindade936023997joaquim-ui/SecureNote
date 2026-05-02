@@ -5420,19 +5420,19 @@
     ]
   },
   "packageFolders": {
-    "/home/trinity/.nuget/packages/": {}
+    "/home/psio/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/SecureNotes.csproj",
+      "projectUniqueName": "/home/psio/Documentos/SecureNote/SecureNotes.csproj",
       "projectName": "SecureNotes",
-      "projectPath": "/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/SecureNotes.csproj",
-      "packagesPath": "/home/trinity/.nuget/packages/",
-      "outputPath": "/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/obj/",
+      "projectPath": "/home/psio/Documentos/SecureNote/SecureNotes.csproj",
+      "packagesPath": "/home/psio/.nuget/packages/",
+      "outputPath": "/home/psio/Documentos/SecureNote/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/trinity/.nuget/NuGet/NuGet.Config"
+        "/home/psio/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -5511,7 +5511,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/10.0.105/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/10.0.107/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
@@ -5934,8 +5934,28 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "O pacote 'Microsoft.Build' 17.10.4 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-w3q9-fxm7-j8fq",
+      "message": "Package 'Microsoft.Build' 17.10.4 has a known high severity vulnerability, https://github.com/advisories/GHSA-w3q9-fxm7-j8fq",
       "libraryId": "Microsoft.Build",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1901",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'NuGet.Packaging' 6.11.0 has a known low severity vulnerability, https://github.com/advisories/GHSA-g4vj-cjjj-v7hg",
+      "libraryId": "NuGet.Packaging",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1901",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'NuGet.Protocol' 6.11.0 has a known low severity vulnerability, https://github.com/advisories/GHSA-g4vj-cjjj-v7hg",
+      "libraryId": "NuGet.Protocol",
       "targetGraphs": [
         "net10.0"
       ]

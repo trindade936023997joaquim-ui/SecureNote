@@ -17,7 +17,7 @@ namespace SecureNotes.Controllers
             _userManager = userManager;
         }
 
-        // 👤 PERFIL DO UTILIZADOR
+        // Perfil do utilizador
         public IActionResult Index()
         {
             ViewBag.Name = User.Identity?.Name;
@@ -26,21 +26,18 @@ namespace SecureNotes.Controllers
             return View();
         }
 
-        // 🔐 PÁGINA DE SEGURANÇA
         [HttpGet]
         public IActionResult Security()
         {
             return View();
         }
-
-        // 🔐 VIEW ALTERAR PASSWORD (GET)
+        
         [HttpGet]
         public IActionResult ChangePassword()
         {
             return View();
         }
-
-        // 🔐 ALTERAR PASSWORD (POST)
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)

@@ -19,109 +19,109 @@ build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
 build_property.RootNamespace = SecureNotes
 build_property.RootNamespace = SecureNotes
-build_property.ProjectDir = /home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/
+build_property.ProjectDir = /home/psio/Documentos/SecureNote/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes
+build_property.MSBuildProjectDirectory = /home/psio/Documentos/SecureNote
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/Areas/Identity/Pages/Account/Login.cshtml]
+[/home/psio/Documentos/SecureNote/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/Areas/Identity/Pages/Account/Logout.cshtml]
+[/home/psio/Documentos/SecureNote/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9Mb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/Areas/Identity/Pages/Account/Register.cshtml]
+[/home/psio/Documentos/SecureNote/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[/home/psio/Documentos/SecureNote/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9fVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[/home/psio/Documentos/SecureNote/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/Areas/Identity/Pages/_ViewImports.cshtml]
+[/home/psio/Documentos/SecureNote/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/Areas/Identity/Pages/_ViewStart.cshtml]
+[/home/psio/Documentos/SecureNote/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/Views/Home/Index.cshtml]
+[/home/psio/Documentos/SecureNote/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/Views/Home/Privacy.cshtml]
+[/home/psio/Documentos/SecureNote/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/Views/Notes/Create.cshtml]
+[/home/psio/Documentos/SecureNote/Views/Notes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTm90ZXMvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/Views/Notes/Delete.cshtml]
+[/home/psio/Documentos/SecureNote/Views/Notes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTm90ZXMvRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/Views/Notes/Details.cshtml]
+[/home/psio/Documentos/SecureNote/Views/Notes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTm90ZXMvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/Views/Notes/Edit.cshtml]
+[/home/psio/Documentos/SecureNote/Views/Notes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTm90ZXMvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/Views/Notes/Index.cshtml]
+[/home/psio/Documentos/SecureNote/Views/Notes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTm90ZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/Views/Security/Lock.cshtml]
+[/home/psio/Documentos/SecureNote/Views/Security/Lock.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VjdXJpdHkvTG9jay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/Views/Shared/Error.cshtml]
+[/home/psio/Documentos/SecureNote/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/Views/Shared/_LoginPartial.cshtml]
+[/home/psio/Documentos/SecureNote/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/home/psio/Documentos/SecureNote/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/Views/User/ChangePassword.cshtml]
+[/home/psio/Documentos/SecureNote/Views/User/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9DaGFuZ2VQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/Views/User/Index.cshtml]
+[/home/psio/Documentos/SecureNote/Views/User/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/Views/User/Security.cshtml]
+[/home/psio/Documentos/SecureNote/Views/User/Security.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9TZWN1cml0eS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/Views/_ViewImports.cshtml]
+[/home/psio/Documentos/SecureNote/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/Views/_ViewStart.cshtml]
+[/home/psio/Documentos/SecureNote/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/trinity/Documentos/aspNetCore/BlocoNota/SecureNotes/Views/Shared/_Layout.cshtml]
+[/home/psio/Documentos/SecureNote/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-j8adopml20
